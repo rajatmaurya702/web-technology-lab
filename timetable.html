@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        th {
+            background-color: #084594;
+            color: #FFD32D;
+        }
+        td {
+            border: 2px solid #008E89;
+            padding: 2px;
+        }
+        .day {
+            background-color: #008E89;
+            color: #FFD32D;
+            border: 0;
+        }
+        table {
+            box-sizing: border-box;
+            border-collapse: collapse;
+            border-spacing: 0 0;
+            background-color: #FFD32D;
+            color: #084594;
+            text-align: center;
+        }
+        .date {
+            background-color: #085E7D;
+            color: #FFD32D;
+        }
+        .date td{
+            border:0;
+        }
+        td:hover {
+            color: #008E89;
+            background-color: #d1af34;
+        }
+    
+        
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>I Period</th>
+            <th>II Period</th>
+            <th>III Period</th>
+            <th>IV Period</th>
+              <th></th>
+            <th>V Period</th>
+            <th>VI Period</th>
+            <th>VII Period</th>
+            <th>VIII Period</th>
+        </tr>
+        <tr class="date">
+            <td> </td>
+            <td>9:00-9:50</td>
+            <td>9:50-10:40</td>
+            <td>10:40-11:30</td>
+            <td>11:30-12:20</td>
+            <td>12:20-01:20 </td>
+            <td>01:20-02:10</td>
+            <td>02:10-03:00</td>
+            <td>03:00-03:50</td>
+            <td>03:50-04:40</td>
+        </tr>
+        <tr>
+            <td class="day">MON</td>
+            <td>CN</td>
+            <td>WT</td>
+            <td>SE</td>
+            <td>BD</td>
+            <td rowspan="5"> Lunch</td>
+            <td>SPM</td>
+            <td>VA</td>
+            <td>MENTORING</td>
+            <td></td>
+        </tr>
+         <tr>
+            <td class="day">TUE</td>
+            <td>IT</td>
+            <td>CN</td>
+            <td>WT</td>
+            <td>SPM</td>
+            <td colspan="2">WT LAB</td>
+            <td>SE</td>
+            <td></td>
+        </tr>
+         <tr>
+            <td class="day">WED</td>
+            <td colspan="2">BD</td>
+            <td>WT</td>
+            <td>CN</td>
+            <td colspan="2">SE LAB</td>
+            <td>SPM</td>
+            <td>SE</td>
+        </tr>
+         <tr>
+            <td class="day">THU</td>
+            <td colspan="2">SS</td>
+            <td>BD</td>
+            <td>CN</td>
+            <td colspan="2">VALUE ADDED</td>
+            <td colspan="2">CN LAB</td>
+        </tr>
+         <tr>
+            <td class="day">FRI</td>
+            <td>IT</td>
+            <td>SE</td>
+            <td colspan="2">E-WT LAB</td>
+            <td colspan="2">QA</td>
+            <td>WT</td>
+            <td></td>
+        </tr>
+
+    </table>
+    <script>
+        var list = document.querySelectorAll("td");
+        setInterval(()=>{
+            let id = Math.floor(10 + Math.random(list.length)*40);
+            list[id].style.backgroundColor="#008E89";
+            setTimeout(()=>{
+                list[id].style.backgroundColor = "#FFD32D"
+            }, 1000)
+        }, 200)
+        // console.log();
+
+    </script>
+</body>
+
+</html>
